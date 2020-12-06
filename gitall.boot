@@ -44,7 +44,7 @@
   [u user USER str "il nome utente github"
    f force bool "Forza il comando senza confermare"]
 
-  (if (nil? user)
+  (if (nil? (:user *opts*))
     (println "ERRORE: devi inserire il nome utente github. Prova -h")
     (if (:force *opts*)
       (do
